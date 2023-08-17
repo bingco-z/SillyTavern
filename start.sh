@@ -25,6 +25,7 @@ fi
 
   echo -e "Running on Repl.it... \nPatching Whitelist..."
   sed -i 's|whitelistMode = true|whitelistMode = false|g' "config.conf"
+  sed -i 's|securityOverride = false|securityOverride = true|g' "config.conf"
 
 
 echo "Installing Node Modules..."
