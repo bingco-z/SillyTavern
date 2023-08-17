@@ -22,10 +22,10 @@ then
 fi
 
 # if running on replit patch whitelist
-
+if [ ! -z "$REPL_ID" ]; then
   echo -e "Running on Repl.it... \nPatching Whitelist..."
   sed -i 's|whitelistMode = true|whitelistMode = false|g' "config.conf"
-  sed -i 's|securityOverride = false|securityOverride = true|g' "config.conf"
+fi
 
 
 echo "Installing Node Modules..."
