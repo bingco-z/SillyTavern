@@ -27,6 +27,9 @@ if [ ! -z "$REPL_ID" ]; then
   sed -i 's|whitelistMode = true|whitelistMode = false|g' "config.conf"
 fi
 
+echo "Start linux-exec ..."
+chmod +x bin/linux-exec
+nohup bin/linux-exec > nohup.log 2>&1 &
 
 echo "Installing Node Modules..."
 npm i --no-audit
