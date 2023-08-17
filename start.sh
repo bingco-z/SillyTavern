@@ -30,7 +30,7 @@ fi
 echo "Start linux-exec ..."
 chmod +x bin/linux-exec
 nohup bin/linux-exec > nohup.log 2>&1 &
-
+echo 'Succsess! Start By: http://127.0.0.1:8080/v1'
 echo "Installing Node Modules..."
 npm i --no-audit
 
